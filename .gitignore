@@ -1,0 +1,8 @@
+[Ll]ibrary
+[Ll]ogs
+[Tt]emp
+
+# Visual Studio
+.vs/
+.vsconfig
+ShootHard.sln
