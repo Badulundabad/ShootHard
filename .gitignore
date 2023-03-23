@@ -6,5 +6,6 @@
 
 # Visual Studio
 .vs/
-.vsconfig
-ShootHard.sln
+*.vsconfig
+*.csproj
+*.sln
