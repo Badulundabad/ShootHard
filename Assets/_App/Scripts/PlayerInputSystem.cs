@@ -23,7 +23,7 @@ public partial class PlayerInputSystem : SystemBase
         Vector2 value = _input.GamePlay.Move.ReadValue<Vector2>() * SystemAPI.Time.DeltaTime;
         float3 moveDelta = new float3(value.x, 0, value.y);
 
-        foreach (var (speed, localTransform, localToWorld) in SystemAPI.Query<SpeedComponent, RefRW<LocalTransform>, LocalToWorld>())
+        foreach (var (speed, localTransform, localToWorld) in SystemAPI.Query<SpeedComponent, RefRW<LocalTransform>, LocalToWorld>().WithAll<PlayerComponent>())
         {
             localTransform.ValueRW.Position += moveDelta * speed.Value;
 
